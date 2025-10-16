@@ -1,4 +1,5 @@
 # Initial Setup
+(note the following instructions have been made with a linux terminal in mind)
 ensure python is installed by pasting the following command in a terminal:
 ```
 python3 --version
