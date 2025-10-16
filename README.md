@@ -1,5 +1,5 @@
 # Initial Setup
-(note the following instructions have been made with a linux terminal in mind)
+(note the following instructions have been made with a linux terminal in mind)  
 ensure python is installed by pasting the following command in a terminal:
 ```
 python3 --version
@@ -34,11 +34,11 @@ pip install -r requirements.txt
 # Setting up API keys
 in the same folder create a .env file and then paste in the following:
 ```
-GEMINI_APIKEY=yourkey
+GEMINI_API_KEY=yourkey
 SERPAPI_KEY=yourkey
 ```
-for the gemini api key got to https://aistudio.google.com/app/api-keys and generate a new key.
-for the serpapi key go to https://serpapi.com/manage-api-key and register with the free plan to generate the api key.
+for the gemini api key got to https://aistudio.google.com/app/api-keys and generate a new key.  
+for the serpapi key go to https://serpapi.com/manage-api-key and register with the free plan to generate the api key.  
 (Note:serpapi is not required but it is needed to provide contexual sources.)
 
 # running the script
