@@ -17,6 +17,12 @@ create a folder for the project with:
 mkdir project_chronos
 cd project_chronos
 ```
+# Clone the repository
+in the terminal paste the following command:
+```
+git clone https://github.com/imaracoon354/Project-Chronos
+```
+# Initialize Virtual Environment
 now to initialize a virtual environment paste the following commands:
 ```
 python3 -m venv venv
