@@ -12,25 +12,24 @@ also install pip with:
 ```
 sudo apt install python3-pip
 ```
-create a folder for the project with:
-```
-mkdir project_chronos
-cd project_chronos
-```
 # Clone the repository
 in the terminal paste the following command:
 ```
 git clone https://github.com/imaracoon354/Project-Chronos
 ```
+to change to project directory:
+```
+cd ./Project-Chronos/
+```
 # Initialize Virtual Environment
-now to initialize a virtual environment paste the following commands:
+now to initialize the virtual environment paste the following commands:
 ```
 python3 -m venv venv
 source venv/bin/activate
 ```
 if all steps were done correctly your terminal should look like this:
 ```
-(venv) yourname@yourpc:~/project_chronos$
+(venv) yourname@yourpc:~/Project-Chronos$
 ```
 # install required librarires
 inside the virtual environment paste the follwoing command:
