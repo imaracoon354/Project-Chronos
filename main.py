@@ -3,8 +3,8 @@ import google.generativeai as genai
 import requests
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
+from serpapi import GoogleSearch
 
-# Load the API key from .env
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
@@ -16,19 +16,15 @@ def reconstruct_text(fragment):
     return response.text.strip()
 
 def search_context(query):
-    """Perform a Google search to find relevant context links."""
-    search_url = f"https://www.google.com/search?q={query.replace(' ', '+')}"
-    headers = {"User-Agent": "Mozilla/5.0"}
-    res = requests.get(search_url, headers=headers)
-    soup = BeautifulSoup(res.text, "html.parser")
-
-    links = []
-    for a in soup.select("a[href^='http']"):
-        href = a['href']
-        if "google" not in href:
-            links.append(href)
-        if len(links) >= 5:
-            break
+    """Use SerpAPI to get relevant Google search links."""
+    params = {
+        "engine": "google",
+        "q": query,
+        "api_key": os.getenv("SERPAPI_KEY")
+    }
+    search = GoogleSearch(params)
+    results = search.get_dict()
+    links = [r["link"] for r in results.get("organic_results", [])[:5]]
     return links
 
 def create_report(original, reconstructed, sources):
