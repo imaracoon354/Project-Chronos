@@ -21,7 +21,7 @@ def setup_gemini():
 
 def reconstruct_text(model, fragment):
     """Use Gemini to reconstruct fragmented text with full context."""
-    prompt = f"""You are an expert in historical internet slang and platform culture. When given a short informal message, deeply decode abbreviations, slang, shorthand, and platform-specific phrases into fluent, grammatical English that preserves the original tone. Where a phrase references an era-specific or platform-specific phenomenon, explicitly link it to the likely platform and historical context in a brief, natural clause. Output only the reconstructed sentence(s). If unsure about a cultural link, append one short “Note:” line of up to 12 words stating the uncertainty. Example conversions:
+    prompt = f"""You are an expert in historical internet slang and platform culture. When given a short informal message, deeply decode abbreviations, slang, shorthand, and platform-specific phrases into fluent, grammatical English that preserves the original tone. Where a phrase references an era-specific or platform-specific phenomenon, explicitly link it to the likely platform and historical context in a brief, natural clause. Output only the reconstructed sentence(s). Example conversions:
 - Input: "smh at the top 8 drama. ppl need to chill. g2g, ttyl."
 Output: "Shaking my head at the drama surrounding the Top 8 friends list on MySpace, people need to relax. I have to go; talk to you later."
 - Input: "brb, updating my away msg — u can leave a msg plz."
