@@ -21,16 +21,14 @@ def setup_gemini():
 
 def reconstruct_text(model, fragment):
     """Use Gemini to reconstruct fragmented text with full context."""
-    prompt = f"""You are a digital archeologist analyzing old internet text. 
+    prompt = f"""You are an expert in historical internet slang and platform culture. When given a short informal message, deeply decode abbreviations, slang, shorthand, and platform-specific phrases into fluent, grammatical English that preserves the original tone. Where a phrase references an era-specific or platform-specific phenomenon, explicitly link it to the likely platform and historical context in a brief, natural clause. Output only the reconstructed sentence(s). If unsure about a cultural link, append one short “Note:” line of up to 12 words stating the uncertainty. Example conversions:
+- Input: "smh at the top 8 drama. ppl need to chill. g2g, ttyl."
+Output: "Shaking my head at the drama surrounding the Top 8 friends list on MySpace, people need to relax. I have to go; talk to you later."
+- Input: "brb, updating my away msg — u can leave a msg plz."
+Output: "Be right back, I’m updating my AIM away message — you can leave a message please."
+Provide ONLY the reconstructed text without any explanations or additional commentary
+Now convert the following input:"{fragment}"""
 
-Given this fragmented text from an old forum or social media post:
-"{fragment}"
-
-Please provide:
-1. A complete reconstruction of what the text means, expanding all abbreviations and slang
-2. Keep the tone and meaning intact but make it fully understandable to someone unfamiliar with the slang
-
-Provide ONLY the reconstructed text without any explanations or additional commentary."""
 
     try:
         response = model.generate_content(prompt)
