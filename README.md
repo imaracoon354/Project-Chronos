@@ -69,4 +69,47 @@ Finally, to run the script and use the project, enter the command:
 ```
 python main.py
 ```
+## Example Report
+```
+(venv) PS C:\Users\visha\Project-Chronos> python main.py
+Enter the fragmented text: "smh at the top 8 drama. ppl need to chill. g2g, ttyl."
+Project Chronos: The AI Archeologist
+==================================================
+
+Analyzing fragment: "smh at the top 8 drama. ppl need to chill. g2g, ttyl."
+
+Step 1: Initializing Gemini AI...
+Step 2: Reconstructing text with AI...
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1760723305.508452   15828 alts_credentials.cc:93] ALTS creds ignored. Not running on GCP and untrusted ALTS is not enabled.
+Reconstruction complete.
+
+Step 3: Searching web for contextual sources...
+   Identified slang terms: smh, ppl, g2g, ttyl
+   Searching: smh meaning internet slang
+   Searching: ppl meaning internet slang
+   Searching: g2g meaning internet slang
+   Searching: ttyl meaning internet slang
+Found 5 relevant sources.
+
+Step 4: Generating reconstruction report...
+
+--- RECONSTRUCTION REPORT ---
+
+[Original Fragment]
+> ""smh at the top 8 drama. ppl need to chill. g2g, ttyl.""
+
+[AI-Reconstructed Text]
+> "Shaking my head at the drama surrounding the Top 8 friends list on MySpace, people need to relax. I have to go; talk to you later."
+
+[Contextual Sources]
+* https://www.merriam-webster.com/wordplay/what-does-smh-mean-shaking-my-head
+* https://www.usatoday.com/story/tech/2022/12/29/smh-meaning-definition-smh-acronym-and-examples-conversation/10927122002/
+* https://www.mmguardian.com/teen-slang/ppl?srsltid=AfmBOoqVwt3bOH_TEFAknRzyNWDmrNVMJqUPONHeEr-ZxzSP2KB1-Pe1
+* https://www.airdroid.com/teen-slang/ppl-meaning/
+* https://en.wiktionary.org/wiki/G2G
+
+
+Report saved to 'reconstruction_report.txt'
+```
 
